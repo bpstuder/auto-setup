@@ -2,7 +2,7 @@
 ###
 # File: setup.sh
 # File Created: 2021-07-01 14:09:02
-# Usage :
+# Usage : This script is designed to install all the tools I need using Homebrew
 # Author: Benoit-Pierre Studer
 # -----
 # HISTORY:
