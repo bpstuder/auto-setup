@@ -52,9 +52,9 @@ APPLICATION_LIST=(
 if ! which cc >/dev/null; then
     echo "Installing Xcode Command Line Tools"
     xcode-select --install
-    echo ">> Done"
+    echo "\U2705 - Done"
 else
-    echo "Xcode already installed. Skipping."
+    echo "\U2705 - Xcode already installed. Skipping."
 fi
 
 if ! which brew >/dev/null; then
@@ -63,14 +63,15 @@ if ! which brew >/dev/null; then
     echo "Registering Homebrew"
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
-    echo ">> Done"
+    echo "\U2705 - Done"
 else
-    echo "Homebrew already installed. Skipping."
+    echo "\U2705 - Homebrew already installed. Skipping."
 fi
 
 for TAP in "${TAP_LIST[@]}"; do
     echo "Processing tap : ${TAP}"
     brew tap ${TAP}
+    echo "\U2705 - Done"
 done
 
 for APPLICATION in "${APPLICATION_LIST[@]}"; do
