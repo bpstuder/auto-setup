@@ -14,18 +14,23 @@
 
 TAP_LIST=(
     "homebrew/autoupdate"
+    "homebrew/cask-fonts"
 )
 
 APPLICATION_LIST=(
+    "svn" #Prerequisite for fonts
     "appcleaner"
     "autopkgr"
     "cyberduck"
     "disk-inventory-x"
     "dropbox"
     "firefox"
+    "font-inconsolata"
+    "font-roboto"
+    "font-clear-sans"
     "github"
     "handbrake"
-    "homebrew/cask-fonts/font-sauce-code-pro-nerd-font"  
+    "font-source-code-pro"
     "iina"
     "iterm2"
     "keepassxc"
