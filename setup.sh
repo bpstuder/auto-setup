@@ -28,6 +28,7 @@ APPLICATION_LIST=(
     "font-inconsolata"
     "font-roboto"
     "font-clear-sans"
+    "font-fira-code"
     "github"
     "handbrake"
     "font-source-code-pro"
