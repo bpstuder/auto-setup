@@ -105,16 +105,21 @@ for TAP in "${TAP_LIST[@]}"; do
 done
 
 for APPLICATION in "${APPLICATION_LIST[@]}"; do
-    # LogVerbose "info" "Processing: ${APPLICATION}"
+    
     LogVerbose "info" "Checking if ${APPLICATION} is installed"
     IS_INSTALLED=$(brew list -1 | grep ${APPLICATION})
     if [[ -z ${IS_INSTALLED} ]]; then
+        LogVerbose "info" "Installing : ${APPLICATION}"
         brew install ${APPLICATION} --force >> /dev/null
         LogVerbose "ok" "Done"
     else
         LogVerbose "ok" "${APPLICATION} already installed"
     fi
 done
+
+LogVerbose "info" "Creating LaunchAgents folder"
+mkdir -p /Users/bpstuder/Library/LaunchAgents
+LogVerbose "ok" "Done"
 
 LogVerbose "info" "Checking if Brew Autoupdate is set up"
 AUTOUPDATE_STATUS=$(brew autoupdate status | awk -F '.' '{print $1}')
