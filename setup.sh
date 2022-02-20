@@ -44,6 +44,7 @@ APPLICATION_LIST=(
     "rectangle"
     "slack"
     "suspicious-package"
+    "unnaturalscrollwheels"
     "veracrypt"
     "visual-studio-code"
     "whatsapp"
